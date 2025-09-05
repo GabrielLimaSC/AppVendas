@@ -1,9 +1,14 @@
 import Image from "next/image";
+import { Layout } from "./components/layout";
 
 const Home: React.FC = () => {
   return (
     <div>
-      testando
+      Bem Vindo!
+
+      <button className="button">Button</button>
+
+      <Layout/>
     </div>
   );
 
