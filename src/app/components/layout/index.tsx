@@ -1,13 +1,15 @@
+import { Menu } from './menu';
+
 export const Layout: React.FC = () => {
     return (
         <div className="app">
             <section className="main-content columns is-fullheight">
-                {/* Menu ficara aqui */}
+                <Menu />
 
-                <div className="container column is-10">
-                    <div className="card">
+                <div className="container column is-10 ">
+                    <div className="card has-background-light has-text-black">
                         <div className="card-header">
-                            <p className="card-header-title">
+                            <p className="card-header-title has-text-black">
                                 cadastro
                             </p>
                         </div>
