@@ -1,6 +1,11 @@
 import { Menu } from './menu';
 
-export const Layout: React.FC = () => {
+interface LayoutProps {
+    titulo?: string;
+    children?: React.ReactNode;
+}
+
+export const Layout: React.FC<LayoutProps> = ({ titulo, children }) => {
     return (
         <div className="app">
             <section className="main-content columns is-fullheight">
@@ -10,12 +15,12 @@ export const Layout: React.FC = () => {
                     <div className="card has-background-light has-text-black">
                         <div className="card-header">
                             <p className="card-header-title has-text-black">
-                                cadastro
+                                { titulo }
                             </p>
                         </div>
                         <div className="card-content">
                             <div className="content">
-                                conteudo
+                                { children }
 
                             </div>
                         </div>
