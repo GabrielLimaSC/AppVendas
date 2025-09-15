@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export const Menu: React.FC = () => {
   return (
@@ -7,24 +8,25 @@ export const Menu: React.FC = () => {
         Minhas Vendas
       </p>
       <ul className="menu-list">
-        <li>
-          <a href="#">
-            <span className="icon"></span> Home
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-            <span className="icon"></span> Cadastros
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-            <span className="icon"></span> Config
-          </a>
-        </li>
+        <MenuItem href="/" label="Home"/>
+        <MenuItem href="/" label="Cadastros"/>
+        <MenuItem href="/" label="Config"/>
       </ul>
     </aside>
+  );
+}
+
+interface MenuItemProps {
+  href: string;
+  label: string;
+}
+
+const MenuItem: React.FC<MenuItemProps> = ({ href, label }) => {
+  return (
+    <li>
+      <Link href={ href }>
+          <span className="icon"></span> { label }
+      </Link>
+    </li>
   );
 }
