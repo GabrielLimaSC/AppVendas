@@ -3,7 +3,55 @@ import { Layout } from '../../layout'
 export const CadastroProdutos: React.FC = () => {
     return (
         <Layout titulo="Cadastro de Produtos">
-            Fomulario vai ficar aqui
+            <div className="field is-grouped">
+
+                {/* SKU do Produto */}
+                <label className="label has-text-black" htmlFor="InputSku">SKU</label>
+                <div className="control is-expanded">
+                    <input className="input placeholder-gray is-hovered has-text-black has-background-white" 
+                    id="InputSku"
+                    type="text" 
+                    placeholder="Digite o SKU do produto"/>
+                </div>
+
+                {/* Preço */}
+                <label className="label has-text-black" htmlFor="InputPreco">Preço</label>
+                <div className="control is-expanded">
+                    <input className="input placeholder-gray is-hovered has-text-black has-background-white" 
+                    id="InputPreco"
+                    type="text" 
+                    placeholder="Digite o preço do produto"/>
+                </div>
+
+            </div>
+            <div className="field">
+                {/* Nome do Produto */}
+                <label className="label has-text-black" htmlFor="InputNome">Nome do Produto</label>
+                <div className="control is-expanded">
+                    <input className="input placeholder-gray is-hovered has-text-black has-background-white" 
+                    id="InputNome"
+                    type="text" 
+                    placeholder="Digite o nome do produto"/>
+                </div>
+
+                {/* Descrição do Produto */}
+                <label className="label has-text-black" htmlFor="InputDescricao">Descrição do Produto</label>
+                <div className="control is-expanded">
+                    <textarea className="textarea placeholder-gray is-hovered has-text-black has-background-white" 
+                    id="InputDescricao"
+                    placeholder="Digite a descrição do produto"></textarea>
+                </div>
+            </div>
+
+            {/* Botões */}
+            <div className="field is-grouped">
+                <div className="control">
+                    <button className="button is-link">Salvar</button>
+                </div>
+                <div className="control">
+                    <button className="button is-link is-light">Voltar</button>
+                </div>
+            </div>
         </Layout>
     );
 }
