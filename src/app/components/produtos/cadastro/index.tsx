@@ -3,43 +3,56 @@ import { Layout } from '../../layout'
 export const CadastroProdutos: React.FC = () => {
     return (
         <Layout titulo="Cadastro de Produtos">
-            <div className="field is-grouped">
+            <div className="columns">
 
-                {/* SKU do Produto */}
-                <label className="label has-text-black" htmlFor="InputSku">SKU</label>
-                <div className="control is-expanded">
-                    <input className="input placeholder-gray is-hovered has-text-black has-background-white" 
-                    id="InputSku"
-                    type="text" 
-                    placeholder="Digite o SKU do produto"/>
+                    {/* SKU do Produto */}
+                <div className="field is-half column">
+                    <label className="label has-text-black" htmlFor="InputSku">SKU</label>
+                    <div className="control is-expanded">
+                        <input className="input placeholder-gray is-hovered has-text-black has-background-white" 
+                        id="InputSku"
+                        type="text" 
+                        placeholder="Digite o SKU do produto"/>
+                    </div>
                 </div>
 
-                {/* Preço */}
-                <label className="label has-text-black" htmlFor="InputPreco">Preço</label>
-                <div className="control is-expanded">
-                    <input className="input placeholder-gray is-hovered has-text-black has-background-white" 
-                    id="InputPreco"
-                    type="text" 
-                    placeholder="Digite o preço do produto"/>
+                    {/* Preço */}
+                <div className="field is-half column">
+                    <label className="label has-text-black" htmlFor="InputPreco">Preço</label>
+                    <div className="control is-expanded">
+                        <input className="input placeholder-gray is-hovered has-text-black has-background-white" 
+                        id="InputPreco"
+                        type="text" 
+                        placeholder="Digite o preço do produto"/>
+                    </div>
                 </div>
 
             </div>
-            <div className="field">
+            
                 {/* Nome do Produto */}
-                <label className="label has-text-black" htmlFor="InputNome">Nome do Produto</label>
-                <div className="control is-expanded">
-                    <input className="input placeholder-gray is-hovered has-text-black has-background-white" 
-                    id="InputNome"
-                    type="text" 
-                    placeholder="Digite o nome do produto"/>
+                <div className="columns">
+                    <div className="field is-full column">
+                        <label className="label has-text-black" htmlFor="InputNome">Nome do Produto</label>
+                        <div className="control is-expanded">
+                            <input className="input placeholder-gray is-hovered has-text-black has-background-white" 
+                            id="InputNome"
+                            type="text" 
+                            
+                            placeholder="Digite o nome do produto"/>
+                        </div>
+                    </div>
                 </div>
+            
 
                 {/* Descrição do Produto */}
-                <label className="label has-text-black" htmlFor="InputDescricao">Descrição do Produto</label>
-                <div className="control is-expanded">
-                    <textarea className="textarea placeholder-gray is-hovered has-text-black has-background-white" 
-                    id="InputDescricao"
-                    placeholder="Digite a descrição do produto"></textarea>
+            <div className="columns">
+                <div className="field column is-full">
+                    <label className="label has-text-black" htmlFor="InputDescricao">Descrição do Produto</label>
+                    <div className="control is-expanded">
+                        <textarea className="textarea placeholder-gray is-hovered has-text-black has-background-white" 
+                        id="InputDescricao"
+                        placeholder="Digite a descrição do produto"></textarea>
+                    </div>
                 </div>
             </div>
 
